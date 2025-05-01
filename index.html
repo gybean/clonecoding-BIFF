@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산국제영화제</title>
+    <link rel="stylesheet" href="lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            //헤더 내비게이션 싱글드롭
+            $('.gnb>li').on('mouseenter', function () {
+                $(this).find('.depth-02').stop().addClass('active');
+            }).on('mouseleave', function () {
+                $(this).find('.depth-02').stop().removeClass('active');
+            });
+
+
+
+            //스크롤시 헤더 유무
+            let lastScrollBar = 0;
+            let headerHeight = $('.header').outerHeight();
+
+            $(window).on('scroll', function(){
+                let scrollBar = $(this).scrollTop();
+
+                console.log(headerHeight);
+
+                if(lastScrollBar > scrollBar) {
+                    $('.header .bottom').addClass('fixed');
+                } else {
+                    $('.header .bottom').removeClass('fixed');
+                };
+
+                if(scrollBar <= headerHeight) {
+                    $('.header .bottom').removeClass('fixed');
+                };
+
+                lastScrollBar = scrollBar;
+            });
+
+
+
+
+            //탑버튼
+            let topBtn = $('.top_btn');
+
+            topBtn.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+
+
+            //section-05
+            var swiper = new Swiper(".section05Swiper", {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 3.4,
+                        spaceBetween: 20,
+                    },
+                    1025: {
+                        slidesPerView: 6.4,
+                        spaceBetween: 14,
+                    },
+                },
+            });
+
+
+
+            //section-04
+            var swiper = new Swiper(".section04Swiper", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1025: {
+                        slidesPerView: 3,
+                        spaceBetween: 14,
+                    },
+                },
+            });
+
+
+
+
+            //section-02
+            var swiper = new Swiper(".section02Swiper", {
+                slidesPerView: 1.4,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 48,
+                    },
+                    1025: {
+                        slidesPerView: 3.8,
+                        spaceBetween: 48,
+                    },
+                },
+            });
+
+
+
+            //메인비주얼 스와이퍼
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+
+
+            //헤더 패밀리사이트 스와이퍼
+            var swiper = new Swiper(".family_site", {
+                loop: true,
+                direction: "vertical",
+                speed: 700,
+                autoplay: {
+                    delay: 2000,
+                    pauseOnMouseEnter: true,
+                },
+            });
+        });//script end
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="inner">
+                <div class="banner">
+                    <a href="#">PRESS SERVICE</a>
+                    <ul class="sponsor">
+                        <li><a href="#"><img src="img/brand_01.svg" alt="샤넬"></a></li>
+                        <li><a href="#"><img src="img/brand_02.svg" alt="부산은행"></a></li>
+                        <li><a href="#"><img src="img/brand_03.svg" alt="제네시스"></a></li>
+                        <li><a href="#"><img src="img/brand_04.svg" alt="한국수력원자력"></a></li>
+                    </ul><!-- .sponsor end -->
+                </div><!-- .banner end -->
+                <div class="top">
+                    <div class="family_site">
+                        <div class="btn">
+                            <!-- Swiper -->
+                            <div class="swiper family_site">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a href="#">BIFF</a></div>
+                                    <div class="swiper-slide"><a href="#">ACFM</a></div>
+                                    <div class="swiper-slide"><a href="#">APM</a></div>
+                                    <div class="swiper-slide"><a href="#">ACF</a></div>
+                                    <div class="swiper-slide"><a href="#">ACA & G.OTT</a></div>
+                                    <div class="swiper-slide"><a href="#">BAFA</a></div>
+                                    <div class="swiper-slide"><a href="#">Community BIFF</a></div>
+                                    <div class="swiper-slide"><a href="#">동네방네 비프</a></div>
+                                    <div class="swiper-slide"><a href="#">Forum BIFF</a></div>
+                                    <div class="swiper-slide"><a href="#">PRESS</a></div>
+                                </div><!-- .swiper-wrapper end -->
+                            </div><!-- .swiper end -->
+                            <span>
+                                <img src="img/top_family_arrow.svg" alt="패밀리 사이트">
+                            </span>
+                        </div><!-- .btn end -->
+                        <ul class="site">
+                            <li><a href="#">BIFF</a></li>
+                            <li><a href="#">ACFM</a></li>
+                            <li><a href="#">APM</a></li>
+                            <li><a href="#">ACF</a></li>
+                            <li><a href="#">ACA & G.OTT</a></li>
+                            <li><a href="#">BAFA</a></li>
+                            <li><a href="#">Community BIFF</a></li>
+                            <li><a href="#">동네방네 비프</a></li>
+                            <li><a href="#">Forum BIFF</a></li>
+                            <li><a href="#">PRESS</a></li>
+                        </ul><!-- .site end -->
+                    </div><!-- .family_site end -->
+                    <h1 class="logo">
+                        <a href="#"><img src="img/2025_top_logo.svg" alt="2025 부산국제영화제 로고"></a>
+                    </h1><!-- .logo end -->
+                    <ul class="icon">
+                        <li><a href="#">ENG</a></li>
+                        <li>
+                            <a href="#">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.8276 12.5C15.589 12.5 17.8276 10.2614 17.8276 7.5C17.8276 4.73858 15.589 2.5 12.8276 2.5C10.0662 2.5 7.82764 4.73858 7.82764 7.5C7.82764 10.2614 10.0662 12.5 12.8276 12.5Z" stroke="white" stroke-opacity="0.7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.4176 22.5C21.4176 18.63 17.5676 15.5 12.8276 15.5C8.08767 15.5 4.23767 18.63 4.23767 22.5" stroke="white" stroke-opacity="0.7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4_165)">
+                                    <mask id="mask0_4_165" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                                    <path d="M24.8276 0.5H0.827637V24.5H24.8276V0.5Z" fill="white"/>
+                                    </mask>
+                                    <g mask="url(#mask0_4_165)">
+                                    <path d="M24.3889 21.9455L19.7437 17.2984C23.2195 12.6536 22.2717 6.07058 17.627 2.59486C12.9822 -0.880859 6.39919 0.0668559 2.92348 4.71163C-0.552245 9.3564 0.395467 15.9394 5.04025 19.4152C8.77131 22.2072 13.8959 22.2072 17.627 19.4152L22.2741 24.0623C22.8581 24.6463 23.8049 24.6463 24.3888 24.0623C24.9728 23.4783 24.9728 22.5315 24.3888 21.9475L24.3889 21.9455ZM11.3723 18.5182C7.24427 18.5182 3.89787 15.1718 3.89787 11.0438C3.89787 6.91566 7.24427 3.56925 11.3723 3.56925C15.5004 3.56925 18.8468 6.91566 18.8468 11.0438C18.8424 15.1699 15.4986 18.5138 11.3723 18.5182Z" fill="white" fill-opacity="0.7"/>
+                                    </g>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_4_165">
+                                    <rect width="24" height="25" fill="white" transform="translate(0.827637)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon-03.svg" alt="전체메뉴">
+                            </a>
+                        </li>
+                    </ul><!-- .icon end -->
+                </div><!-- .top end -->
+                <div class="bottom">
+                    <nav class="nav">
+                        <ul class="gnb">
+                            <li>
+                                <a href="#" class="depth-01">부산국제영화제</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">BIFF 소개</a></li>
+                                    <li><a href="#">개최개요</a></li>
+                                    <li><a href="#">프로그램 섹션</a></li>
+                                    <li><a href="#">어워드</a></li>
+                                    <li><a href="#">프로그래머 소개</a></li>
+                                    <li><a href="#">조직구성</a></li>
+                                    <li><a href="#">스폰서십</a></li>
+                                    <li><a href="#">메세나</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-01">출품/신청안내</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">출품신청안내</a></li>
+                                    <li><a href="#">공식 상영작</a></li>
+                                    <li><a href="#">CHANEL X BIFF 아시아영화아카데미</a></li>
+                                    <li><a href="#">아시아프로젝트마켓</a></li>
+                                    <li><a href="#">아시아영화펀드</a></li>
+                                    <li><a href="#">부산스토리마켓</a></li>
+                                    <li><a href="#">플랫폼부산</a></li>
+                                    <li><a href="#">커뮤니티비프</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-01">배지안내</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">배지안내</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-01">커뮤니티</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">뉴스</a></li>
+                                    <li><a href="#">사진</a></li>
+                                    <li><a href="#">영상</a></li>
+                                    <li><a href="#">상영작 리뷰</a></li>
+                                    <li><a href="#">1:1문의</a></li>
+                                    <li><a href="#">SNS허브</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-01">역대영화제</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">영화제 발자취</a></li>
+                                    <li><a href="#">역대 상영작 검색</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-01">스태프 채용</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">스태프 채용</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+                        </ul><!-- .gnb end -->
+                    </nav><!-- .nav end -->
+                </div><!-- .bottom end -->
+            </div><!-- .inner end -->
+        </header><!-- .header end -->
+
+        <main class="main">
+            <div class="main_visual">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="text">
+                                <p>제 30회 부산국제영화제</p>
+                                <h2>공식 상영작 출품 공모</h2>
+                                <ul class="date">
+                                    <li>접수마감</li>
+                                    <li>단편 2025년 6월 4일(수) 18:00</li>
+                                    <li>장편 2025년 7월 2일(수) 18:00</li>
+                                </ul><!-- .date end -->
+                                <div class="btn">
+                                    <a href="#">
+                                        <span>바로가기</span>
+                                        <div class="icon">
+                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_42_66)">
+                                                <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_42_66">
+                                                <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div><!-- .icon end -->
+                                    </a>
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <div class="text">
+                                <p>제 30회 부산국제영화제</p>
+                                <h2>2025 아시아프로젝트마켓 참가작 공모</h2>
+                                <ul class="date">
+                                    <li>접수마감: 2025년 5월 12일(월) 23:59</li>
+                                </ul><!-- .date end -->
+                                <div class="btn">
+                                    <a href="#">
+                                        <span>바로가기</span>
+                                        <div class="icon">
+                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_42_66)">
+                                                <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_42_66">
+                                                <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div><!-- .icon end -->
+                                    </a>
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <div class="text">
+                                <p>제 30회 부산국제영화제</p>
+                                <h2>2025 부산스토리마켓 참가작 공모</h2>
+                                <ul class="date">
+                                    <li>접수마감: 2025년 4월 30일(수)</li>
+                                </ul><!-- .date end -->
+                                <div class="btn">
+                                    <a href="#">
+                                        <span>바로가기</span>
+                                        <div class="icon">
+                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_42_66)">
+                                                <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_42_66">
+                                                <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div><!-- .icon end -->
+                                    </a>
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .swiper-slide end -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div><!-- .main_visual end -->
+
+            <section class="section section-01">
+                <div class="inner">
+                    <div class="title">
+                        <h3>BIFF<br />Community</h3>
+                        <div class="btn">
+                            <a href="#">
+                                <span>더 보기</span>
+                                <div class="icon">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_42_66)">
+                                        <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_42_66">
+                                        <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div><!-- .icon end -->
+                            </a>
+                        </div><!-- .btn end -->
+                    </div><!-- .title end -->
+                    <div class="item_wrap">
+                        <div class="item notice">
+                            <div class="sub_title">
+                                <p>공지사항</p>
+                                <a href="#">더보기</a>
+                            </div><!-- .sub_title end -->
+                            <ul>
+                                <li><a href="#">[공고] 2025 아시아콘텐츠&필름마켓 설치 대행업체 입찰 공모 계획</a></li>
+                                <li><a href="#">[공고] ACFM2025 행사운영 위탁용역 협상에 의한 계약 입찰 공고</a></li>
+                                <li><a href="#">[공고] 2025년 부산국제영화제 대체인력(초청팀장) 채용_접수마감</a></li>
+                            </ul>
+                        </div><!-- .item end -->
+                        <div class="item">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/section01_img-01.jpg" alt="스폰서 모집">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <h4>스폰서 모집</h4>
+                                    <p>제30회 부산국제영화제와 함께할 <b>스폰서</b>를 모집합니다.</p>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .item end -->
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/section01_img-02.jpg" alt="샤넬">
+                            </div><!-- .image end -->
+                        </div><!-- .item end -->
+                        <div class="item notice">
+                            <div class="sub_title">
+                                <p>BIFF 뉴스</p>
+                                <a href="#">더보기</a>
+                            </div><!-- .sub_title end -->
+                            <ul>
+                                <li><a href="#">[BIFF 보도자료] 제30회 부산국제영화제 기자간담회(4월 29일) 안내!</a></li>
+                                <li><a href="#">[BIFF보도자료] 광화문 영화열차 - 부산국제영화제 한국영화 상영회 in 씨네큐브</a></li>
+                                <li><a href="#">[BIFF 보도자료] 부산국제영화제 정한석 신임 집행위원장 위촉!</a></li>
+                            </ul>
+                        </div><!-- .item end -->
+                    </div><!-- .item_wrap end -->
+                </div><!-- .inner end -->
+            </section><!-- .section-01 end -->
+
+            <section class="section section-02">
+                <div class="title inner">
+                    <h3>Inside BIFF</h3>
+                </div><!-- .title end -->
+                <div class="slide">
+                    <!-- Swiper -->
+                    <div class="swiper section02Swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service01.jpg" alt="아시아콘텐츠&필름마켓">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>아시아콘텐츠&필름마켓</li>
+                                                <li>ACFM</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>아시아의 대표적인 콘텐츠 마켓, 영화·영상 콘텐츠부터 도서, 웹툰, 웹소설, 스토리 등의 원천 IP까지 거래할 수 있는 종합 콘텐츠
+                                                거래의 장</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service02.jpg" alt="부산스토리마켓">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>부산스토리마켓</li>
+                                                <li>BSM</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>모든 콘텐츠의 시작인 스토리가 다양한 플랫폼으로 재생산될 수 있도록 거래되는 원천 IP 세일즈 마켓</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service03.jpg" alt="아시아프로젝트마켓">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>아시아프로젝트마켓</li>
+                                                <li>APM</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>기획개발 및 제작 중인 아시아 유망 극영화 프로젝트를 영화산업 관계자들에게 소개하고 선정된 프로젝트와 전 세계 투자, 제작, 배급사
+                                                간의 만남을 주선하는 비즈니스의 장</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service04.jpg" alt="아시아영화펀드">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>아시아영화펀드</li>
+                                                <li>ACF</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>한국을 비롯한 아시아 독립영화 개발/제작 지원 펀드</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service05.jpg" alt="플랫폼부산">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>플랫폼부산</li>
+                                                <li>Platform BUSAN</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>한국을 포함한 아시아의 영화감독, 제작자 및 주요 스태프 등 독립영화인들의 공동성장 네트워킹 플랫폼</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service06.jpg" alt="프로듀서허브">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>프로듀서허브</li>
+                                                <li>Producer Hub</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>국제공동제작 활성화를 위한 다국적 프로듀서들의 네트워킹 및 정보공유 프로그램</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service07.jpg" alt="CHANEL X BIFF 아시아영화아카데미">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>CHANEL X BIFF 아시아영화아카데미</li>
+                                                <li>BAFA</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>아시아 영화를 이끌어갈 차세대 영화인들을 위한 영화교육 프로그램</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service08.jpg" alt="포럼비프">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>포럼비프</li>
+                                                <li>Forum BIFF</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>각국의 영화인과 전문가의 참여를 통해 펼쳐질 영화적 소통과 교류의 장</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service09.jpg" alt="비프필름아카데미">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>비프필름아카데미</li>
+                                                <li>BFA</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>부산 소재 대학교와 연계하여 창의적인 영화 인력을 양성 및 육성 지원하는 프로그램</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service10.jpg" alt="아시아콘텐츠&필름마켓">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>아시아콘텐츠&필름마켓</li>
+                                                <li>ACFM</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>아시아의 대표적인 콘텐츠 마켓, 영화·영상 콘텐츠부터 도서, 웹툰, 웹소설, 스토리 등의 원천 IP까지 거래할 수 있는 종합 콘텐츠
+                                                거래의 장</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/img_service11.jpg" alt="커뮤니티비프">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <ul class="sub_title">
+                                                <li>커뮤니티비프</li>
+                                                <li>Community BIFF</li>
+                                            </ul><!-- .sub_title end -->
+                                            <P>관객과 영화인, 활동가, 연구가, 지역주민 모두가 함께 주체가 되는 수평적 열린 영화제</P>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .swiper-slide end -->
+                        </div><!-- .swiper-wrapper end -->
+                    </div><!-- .swiper end -->
+                </div><!-- .slide end -->
+            </section><!-- .section-02 end -->
+
+            <section class="section section-03">
+                <div class="inner">
+                    <div class="title">
+                        <h3>Review</h3>
+                        <div class="btn">
+                            <a href="#">
+                                <span>바로가기</span>
+                                <div class="icon">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_42_66)">
+                                        <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_42_66">
+                                        <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div><!-- .icon end -->
+                            </a>
+                        </div><!-- .btn end -->
+                    </div><!-- .title end -->
+                    <div class="item_wrap">
+                        <div class="left">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/section03_img-00.jpg" alt="포 도터스 : 담백하게 바라보는 거대한 폭풍">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <p>
+                                        <포 도터스> : 담백하게 바라보는 거대한 폭풍
+                                    </p>
+                                    <span>시민평론단</span>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .left end -->
+                        <div class="right">
+                            <div class="list">
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/section03_img-0.jpg" alt="그랜드 투어">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <strong>미겔 고메스, <그랜드 투어></strong>
+                                            <span>씨네21</span>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/section03_img-04.jpg" alt="고독한 미식가 더 무비">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <strong><고독한 미식가 더 무비> : 나와 당신, 우리를 돌보는 요리</strong>
+                                            <span>시민평론단</span>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/section03_img-01.jpg" alt="해피엔드">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <strong><해피엔드> : 미래로 현실을 마주보기</strong>
+                                            <span>시민평론단</span>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/section03_img-03.jpg" alt="포 도터스">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <strong>파얄 카파디아, <우리가 빛이라 상상하는 모든 것></strong>
+                                            <span>씨네21</span>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                                <div class="box">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/section03_img-04.jpg" alt="">
+                                        </div><!-- .image end -->
+                                        <div class="text">
+                                            <strong><고독한 미식가 더 무비> : 나와 당신, 우리를 돌보는 요리</strong>
+                                            <span>시민평론단</span>
+                                        </div><!-- .text end -->
+                                    </a>
+                                </div><!-- .box end -->
+                            </div><!-- .list end -->
+                        </div><!-- .right end -->
+                    </div><!-- .item_wrap end -->
+                </div><!-- .inner end -->
+            </section><!-- .section-03 end -->
+
+            <section class="section section-04">
+                <div class="inner">
+                    <div class="title">
+                        <h3>Video</h3>
+                        <div class="btn">
+                            <a href="#">
+                                <span>더 보기</span>
+                                <div class="icon">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_42_66)">
+                                        <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_42_66">
+                                        <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div><!-- .icon end -->
+                            </a>
+                        </div><!-- .btn end -->
+                    </div><!-- .title end -->
+                    <!-- Swiper -->
+                    <div class="swiper section04Swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="img/mqdefault(1).jpg" alt="비디오1">
+                                    </div><!-- .image end -->
+                                </a>
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="img/mqdefault(2).jpg" alt="비디오2">
+                                    </div><!-- .image end -->
+                                </a>
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="img/mqdefault(3).jpg" alt="비디오3">
+                                    </div><!-- .image end -->
+                                </a>
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="img/mqdefault(4).jpg" alt="비디오4">
+                                    </div><!-- .image end -->
+                                </a>
+                            </div><!-- .swiper-slide end -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="img/mqdefault(5).jpg" alt="비디오5">
+                                    </div><!-- .image end -->
+                                </a>
+                            </div><!-- .swiper-slide end -->
+                        </div><!-- .swiper-wrapper end -->
+                    </div><!-- .swiper end -->
+                </div><!-- .inner end -->
+            </section><!-- .section-04 end -->
+
+            <section class="section section-05">
+                <div class="title inner">
+                    <h3>Archive</h3>
+                    <div class="btn">
+                        <a href="#">
+                            <span>바로가기</span>
+                            <div class="icon">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_42_66)">
+                                    <path d="M8.4375 3.3125L13.125 8M13.125 8L8.4375 12.6875M13.125 8L1.875 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_42_66">
+                                    <rect width="15" height="15" fill="white" transform="translate(15 0.5) rotate(90)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div><!-- .icon end -->
+                        </a>
+                    </div><!-- .btn end -->
+                </div><!-- .title end -->
+                <!-- Swiper -->
+                <div class="swiper section05Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/29th_poster.jpg" alt="제 29회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제29회</strong>
+                                    <b>2024</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/28th_poster.jpg" alt="제 28회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제28회</strong>
+                                    <b>2023</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/27th_poster.jpg" alt="제 27회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제27회</strong>
+                                    <b>2022</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/26th_poster.jpg" alt="제 26회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제26회</strong>
+                                    <b>2021</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/25th_poster.jpg" alt="제 25회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제25회</strong>
+                                    <b>2020</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/24th_poster.jpg" alt="제 24회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제24회</strong>
+                                    <b>2019</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/23rd_poster.jpg" alt="제 23회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제23회</strong>
+                                    <b>2018</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/22nd_poster.jpg" alt="제 22회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제22회</strong>
+                                    <b>2017</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/21st_poster.jpg" alt="제 21회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제21회</strong>
+                                    <b>2016</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/20th_poster.jpg" alt="제 20회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제20회</strong>
+                                    <b>2015</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/19th_poster.jpg" alt="제 19회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제19회</strong>
+                                    <b>2014</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/18th_poster.jpg" alt="제 18회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제18회</strong>
+                                    <b>2013</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/17th_poster.jpg" alt="제 17회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제17회</strong>
+                                    <b>2012</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/16th_poster.jpg" alt="제 16회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제16회</strong>
+                                    <b>2011</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/15th_poster.jpg" alt="제 15회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제15회</strong>
+                                    <b>2010</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/14th_poster.jpg" alt="제 14회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제14회</strong>
+                                    <b>2014</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/13th_poster.jpg" alt="제 13회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제13회</strong>
+                                    <b>2013</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/12th_poster.jpg" alt="제 12회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제12회</strong>
+                                    <b>2012</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/11th_poster.jpg" alt="제 11회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제11회</strong>
+                                    <b>2011</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/10th_poster.jpg" alt="제 10회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제10회</strong>
+                                    <b>2010</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/9th_poster.jpg" alt="제 9회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제9회</strong>
+                                    <b>2009</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/8th_poster.jpg" alt="제 8회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제8회</strong>
+                                    <b>2008</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/7th_poster.jpg" alt="제 7회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제7회</strong>
+                                    <b>2007</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/6th_poster.jpg" alt="제 6회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제6회</strong>
+                                    <b>2006</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/5th_poster.jpg" alt="제 5회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제5회</strong>
+                                    <b>2005</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/4th_poster.jpg" alt="제 4회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제4회</strong>
+                                    <b>2004</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/3rd_poster.jpg" alt="제 3회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제3회</strong>
+                                    <b>2003</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/2nd_poster.jpg" alt="제 2회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제2회</strong>
+                                    <b>2002</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/1st_poster.jpg" alt="제 1회 부산국제영화제">
+                                </div><!-- .image end -->
+                                <div class="text">
+                                    <strong>제1회</strong>
+                                    <b>2001</b>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .swiper-slide end -->
+                    </div><!-- .swiper-wrapper end -->
+                </div><!-- .swiper end -->
+            </section><!-- .section-05 end -->
+
+            <section class="section section-06">
+                <div class="inner">
+                    <div class="left">
+                        <div class="sub_title">
+                            <p>BIFF SNS</p>
+                            <span>Follow us on SNS!</span>
+                        </div><!-- .sub_title end -->
+                        <ul class="sns_icon">
+                            <li>
+                                <a href="#">
+                                    <img src="img/sns_i_facebook.svg" alt="페이스북">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/sns_i_twitter.svg" alt="트위터">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/sns_i_instagram.svg" alt="인스타그램">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/sns_i_youtube.svg" alt="유튜브">
+                                </a>
+                            </li>
+                        </ul><!-- .sns_icon end -->
+                    </div><!-- .left end -->
+                    <div class="right">
+                        <div class="sub_title">
+                            <p>BIFF NEWS LETTER</p>
+                            <span>BIFF 소식을 가장 빠르게 만나려면?</span>
+                        </div><!-- .sub_title end -->
+                        <div class="btn">
+                            <a href="#">
+                                <span>뉴스레터 구독하기</span>
+                                <div class="icon">
+                                    <img src="img/icon-06.svg" alt="뉴스레터 구독하기">
+                                </div><!-- .icon end -->
+                            </a>
+                        </div><!-- .btn end -->
+                    </div><!-- .right -->
+                </div><!-- .inner end -->
+            </section><!-- .section-06 end -->
+
+            <section class="section-07">
+                <ul class="sponsor">
+                    <li>
+                        <a href="#">
+                            <img src="img/main_banner01.svg" alt="부산광역시">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/main_banner02.svg" alt="문화체육관광부">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/main_banner03.png" alt="영화진흥위원회">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/main_banner04.png" alt="영화의전당">
+                        </a>
+                    </li>
+                </ul><!-- .sponsor end -->
+            </section><!-- .section-07 end -->
+        </main><!-- .main end -->
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="top">
+                    <ul class="menu">
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">역대영화제</a></li>
+                        <li><a href="#">프레스 서비스</a></li>
+                    </ul><!-- .menu end -->
+                    <div class="right"><span>© Busan International Film Festival</span></div>
+                </div><!-- .top end -->
+                <div class="bottom">
+                    <ul class="text_wrap">
+                        <li>
+                            <ul class="number">
+                                <li>대표전화 </li>
+                                <li> 1688-3010</li>
+                            </ul><!-- .number end -->
+                        </li>
+                        <li>
+                            <ul class="time">
+                                <li>운영시간 </li>
+                                <li> 10:00-18:00 (주말 및 공휴일 미운영)</li>
+                            </ul><!-- .time -->
+                        </li>
+                        <ul class="address">
+                            <li>
+                                <span>부산사무국</span> (48058) 부산광역시 해운대구 수영강변대로 120 영화의전당 비프힐 3층
+                            </li>
+                            <li>
+                                <span>서울사무소</span> (03131) 서울특별시 종로구 율곡로 84 가든타워 1601호
+                            </li>
+                        </ul><!-- .address end -->
+                    </ul><!-- .text_wrap end -->
+                    <div class="logo">
+                        <img src="img/ft_b_logo.svg" alt="BIFF 2025">
+                    </div><!-- .logo end -->
+                </div><!-- .bottom end -->
+            </div><!-- .inner end -->
+            <button type="button" class="top_btn">
+                <img src="img/top_btn.svg" alt="탑버튼">
+            </button><!-- .top_btn end -->
+        </footer><!-- .footer end -->
+    </div><!-- #wrap end -->
+</body>
+
+</html>
