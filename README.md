@@ -32,9 +32,32 @@
 ---
 
 4. JavaScript 리뷰
-- 자바스크립트와 제이쿼리 구분을 위해 변수명 앞에 $ 추가함
+- [ ] 자바스크립트와 제이쿼리 구분을 위해 변수명 앞에 $ 추가함
 - [x] 메뉴 토글, 스크롤 애니메이션 등 기능 구현 완료
 - [x] 코드 모듈화 완료 (기능별 함수 분리)
+```
+let lastScrollBar = 0;
+            let headerHeight = $('.header').outerHeight();
+
+            $(window).on('scroll', function(){
+                let scrollBar = $(this).scrollTop();
+
+                console.log(headerHeight);
+
+                if(lastScrollBar > scrollBar) {
+                    $('.header .bottom').addClass('fixed');
+                } else {
+                    $('.header .bottom').removeClass('fixed');
+                };
+
+                if(scrollBar <= headerHeight) {
+                    $('.header .bottom').removeClass('fixed');
+                };
+
+                lastScrollBar = scrollBar;
+            });
+'''
+- Scroll Up : 헤더 발생
 
 ---
 
